@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.searchTreeviewControlTest = new SearchTreeView.SearchTreeviewControl();
             this.label1 = new System.Windows.Forms.Label();
+            this.searchTreeviewControlTest = new SearchTreeView.SearchTreeviewControl();
+            this.dataGridViewSearch1 = new SearchTreeView.DataGridViewSearch();
             this.SuspendLayout();
-            // 
-            // searchTreeviewControlTest
-            // 
-            this.searchTreeviewControlTest.ExibirLogo = true;
-            this.searchTreeviewControlTest.Location = new System.Drawing.Point(13, 13);
-            this.searchTreeviewControlTest.Logo = global::SearchTreeView.Properties.Resources.SALARY;
-            this.searchTreeviewControlTest.Name = "searchTreeviewControlTest";
-            this.searchTreeviewControlTest.Size = new System.Drawing.Size(215, 425);
-            this.searchTreeviewControlTest.TabIndex = 0;
             // 
             // label1
             // 
@@ -50,15 +42,33 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             // 
+            // searchTreeviewControlTest
+            // 
+            this.searchTreeviewControlTest.ExibirLogo = true;
+            this.searchTreeviewControlTest.Location = new System.Drawing.Point(13, 13);
+            this.searchTreeviewControlTest.Logo = global::SearchTreeView.Properties.Resources.SALARY;
+            this.searchTreeviewControlTest.Name = "searchTreeviewControlTest";
+            this.searchTreeviewControlTest.Size = new System.Drawing.Size(215, 425);
+            this.searchTreeviewControlTest.TabIndex = 0;
+            // 
+            // dataGridViewSearch1
+            // 
+            this.dataGridViewSearch1.Location = new System.Drawing.Point(561, 35);
+            this.dataGridViewSearch1.Name = "dataGridViewSearch1";
+            this.dataGridViewSearch1.Size = new System.Drawing.Size(754, 450);
+            this.dataGridViewSearch1.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1373, 553);
+            this.Controls.Add(this.dataGridViewSearch1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.searchTreeviewControlTest);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -68,6 +78,7 @@
 
         private SearchTreeviewControl searchTreeviewControlTest;
         private System.Windows.Forms.Label label1;
+        private DataGridViewSearch dataGridViewSearch1;
     }
 }
 

@@ -47,5 +47,28 @@ namespace SearchTreeView
             })
         });
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            var dt = new DataTable();
+            dt.Columns.Add("ID", typeof(string));
+            dt.Columns.Add("Nome", typeof(string));
+            dt.Columns.Add("Email", typeof(string));
+
+            for (int i = 1; i <= 123; i++)
+            {
+                dt.Rows.Add(i.ToString(), $"Nome {i}", $"email{i}@teste.com");
+            }
+
+            //var dados = new DataTable();
+            //dados.Columns.Add("ID", typeof(int));
+            //dados.Columns.Add("Nome", typeof(string));
+            //dados.Columns.Add("Email", typeof(string));
+
+            //for (int i = 1; i <= 123; i++)
+            //    dados.Rows.Add(i, $"Nome {i}", $"email{i}@dominio.com");
+
+            dataGridViewSearch1.CarregarDados(dt);
+        }
     }
 }
